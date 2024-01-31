@@ -1,17 +1,13 @@
-class Deque {
-    constructor() {
-        this.items = [];
+removeFirst() {
+        if (this.isEmpty()) {
+            return null;
+        }
+        return this.items.shift();
     }
 
-    isEmpty() {
-        return this.items.length === 0;
+    removeLast() {
+        if (this.isEmpty()) {
+            return null;
+        }
+        return this.items.pop();
     }
-
-    addFirst(element) {
-        this.items.unshift(element);
-    }
-
-    addLast(element) {
-        this.items.push(element);
-    }
-}
